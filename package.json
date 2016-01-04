@@ -1,0 +1,19 @@
+{
+  "name": "stormpath",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dima K",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.0.2",
+    "body-parser": "^1.14.2",
+    "client-sessions": "^0.7.0",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "mongoose": "^4.3.4"
+  }
+}
