@@ -24,10 +24,10 @@ $(function(){
 	});
 
 	var services = new ServiceList([
-		new Service({ title: 'web development', price: 200}),
-		new Service({ title: 'web design', price: 250}),
-		new Service({ title: 'photography', price: 100}),
-		new Service({ title: 'coffee drinking', price: 10})
+		new Service({ title: 'Meat Lovers Pizza', price: 20}),
+		new Service({ title: 'Supreme Pizza', price: 25}),
+		new Service({ title: 'Onion Rings', price: 7}),
+		new Service({ title: 'Buffalo Wings', price: 10})
 	]);
 
 	// single menu item View

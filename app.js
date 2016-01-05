@@ -36,19 +36,7 @@ app.use(sessions({
 }));
 
 app.get('/', function(req,res){
-  if (req.session && req.session.user){
-    User.findOne({ email : req.session.user.email }, function(err, user){
-      if (!user){
-        req.session.reset();
-        res.render('index.jade');
-      }else{
-        res.locals.user = user;
-        res.render('dashboard.jade');
-      }
-    })
-  } else {
     res.render('index.jade');
-  } 
 });
 
 app.get('/register', function(req, res){
@@ -96,19 +84,7 @@ app.post('/login', function(req,res){
 });
 
 app.get('/dashboard', function(req,res){
-  if (req.session && req.session.user){
-    User.findOne({ email : req.session.user.email }, function(err, user){
-      if (!user){
-        req.session.reset();
-        res.redirect('/login');
-      }else{
-        res.locals.user = user;
-        res.render('dashboard.jade');
-      }
-    })
-  } else {
-    res.render('/login');
-  }
+  res.render('dashboard.jade');
 });
 
 app.get('/logout', function(req,res){

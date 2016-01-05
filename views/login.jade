@@ -1,21 +1,27 @@
-//- extends base
+html
+  head
+    link(href='http://localhost:3000/static/css/style.css', rel='stylesheet')
+  body
+    div.main
+        form(method='post')
+            ul.services
+                p.push Log in
+                input.new(type='email', name='email', required='required', placeholder='Username', autofocus='')
+                br
+                input.new(type='password', name='password' placeholder='Password')    
+                br
+                input(type='submit')
 
-block vars
-  - var title = 'Login'
 
-block body
-  h1 Log Into Your Account
-
-  if error
-    p ERROR: #{error}
-
-  form(method="post")
-    span Email:
-    input(type="email", name="email", required=true)
-    br
-
-    span Password:
-    input(type="password", name="password", required=true)
-    br
-
-    input(type="submit")
+  //-           html
+  //- body
+  //-   nav.main
+  //-     div#please
+  //-       | Please Login or Sign-up to view our menu
+  //-     ul.services
+  //-       li
+  //-         a(href='/login')
+  //-           |  Login
+  //-       li
+  //-         a(href='/register')
+  //-           |  Sign-Up
