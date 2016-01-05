@@ -129,91 +129,80 @@ section, footer, header, aside{
 	opacity: 0.9;
 }
 
-
-/*----------------------------
-	The Demo Footer
------------------------------*/
-
-
-footer{
-	background-color: #080808;
-	bottom: 0;
-	box-shadow: 0 -1px 2px rgba(0,0,0,0.4);
-	height: 40px;
-	left: 0;
-	position: fixed;
-	width: 100%;
-	z-index: 100000;
+h1 {
+  margin:50px;
+  text-align:center;
+  color:#fff;
 }
 
-footer h2{
-	font-size: 14px;
-	font-weight: normal;
-	position: absolute;
-	top:0;
-	left: 50%;
-	bottom:0;
-	margin-left: -420px;
-	padding:13px 20px 0;
-	border:1px solid #000;
-	border-width:0 1px;
-	background-color:rgba(0,0,0,0.6);
-	box-shadow:0 0 5px #000 inset;
-	line-height: 1;
-	margin-top: 0;
+nav {
+  width:100%;
+  margin:50px 0px;
+  background:#EEE;
+  display:block;
 }
 
-footer h2 a{
-	color: #EEEEEE !important;
-	text-decoration:none !important;
+nav ul {
+  float:right;
+  width:70%;
 }
 
-footer h2 i{
-	font-style:normal;
-	color:#888;
+
+nav li {
+  display:inline-block;
+  float:right;
+  width:20%;
+  height:70px;
+  background:#333;
+  color: #D93;
+  text-align:center;
+  -webkit-transition-duration: 50ms;
 }
 
-#tzine-download{
-	opacity:0.9;
-	background-color:#257691;
-	font-size:11px;
-	text-align:center;
-	text-transform:uppercase;
-	width:150px;
-	height:28px;
-	line-height:28px;
-	text-decoration:none !important;
-
-	display: inline-block;
-	border-radius: 2px;
-	color: #fff !Important;
-	font-weight: bold;
-	box-shadow: 0 -1px 2px #1e5e74 inset;
-
-	border-top:1px solid #26849c;
-
-	text-shadow:1px 1px 1px #1e6176;
-	margin-top:6px;
+nav a {
+  text-decoration:none;
+  display:block;
+  width:100%;
+  height:100%;
+  padding:25px 0px;
+  text-wrap:none;
 }
 
-#tzine-download:hover{
-	opacity:1;
+
+nav li:hover {
+  background:#444;
+  color: #FFF;
+  -webkit-transform: scale(1.1) translate(0px,5px);
+  -webkit-box-shadow: 0px 3px 6px rgba(0,0,0,.3);
+  -webkit-backface-visibility: hidden;
 }
 
-#tzine-actions{
-	position:absolute;
-	top:0;
-	width:500px;
-	right:50%;
-	margin-right:-420px;
-	text-align:right;
+nav li:active {
+  -webkit-transform: scale(1.05) translate(0px,3px);
+  -webkit-box-shadow: 0px 2px 3px rgba(0,0,0,.3);
 }
 
-#tzine-actions iframe{
-	display: inline-block;
-	height: 21px;
-	width: 95px;
-	position: relative;
-	float: left;
-	margin-top: 11px;
+/* Mobile Formatting */
+
+@media screen and (max-width:520px) {
+  nav ul {
+    width:100%
+  }
+  
+  nav li {
+    float:none;
+    display:block;
+    width:100%;
+    height:50px;
+  }
+  
+  .bookend {
+    display:none;
+  }
+  
+  nav a{ 
+    padding:15px;
+  }
+  
+  
 }
