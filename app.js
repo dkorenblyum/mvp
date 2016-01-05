@@ -15,7 +15,8 @@ var User = mongoose.model('User', new Schema ({
   firstName : String,
   lastName : String,
   email: { type: String, unique : true },
-  password : String
+  password : String,
+  address: String
 
 }))
 
@@ -48,7 +49,8 @@ app.post('/register', function(req, res){
     firstName : req.body.firstName,
     lastName : req.body.lastName,
     email : req.body.email,
-    password : req.body.password
+    password : req.body.password,
+    address : req.body.address
   });
 
   user.save(function(err){
@@ -83,6 +85,18 @@ app.post('/login', function(req,res){
   });
 });
 
+app.post('/dashboard', function(req,res){
+  res.redirect('/orderDetails');
+});
+
+app.get('/orderDetails', function(req,res){
+
+    User.findOne({ email : req.session.user.email }, function(err, user){
+        res.locals.user = user;
+        res.render('orderDetails.jade');
+    });
+});
+
 app.get('/dashboard', function(req,res){
   res.render('dashboard.jade');
 });
@@ -93,4 +107,7 @@ app.get('/logout', function(req,res){
 });
 
 app.listen(3000);
+
+
+
 

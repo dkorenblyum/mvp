@@ -1,0 +1,13 @@
+html
+  head
+    link(href='http://localhost:3000/static/css/style.css', rel='stylesheet')
+  body
+    div.main
+      ul.services
+        h1.push Delivery Details
+        p.push
+          | Please make sure this information is accurate
+        p.new First Name: #{user.firstName}
+        p.new Last Name:  #{user.lastName}
+        p.new Email:      #{user.email}
+        p.new Address:    #{user.address}

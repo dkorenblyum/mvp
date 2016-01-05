@@ -1,27 +1,24 @@
-//- extends base
-
-block vars
-  - var title = 'Register'
-
-  if error 
-    p ERROR: #{error}
-block body
-  h1 Create an Account
-  form(method="post")
-    span First Name:
-    input(type="text", name="firstName", required=true)
-    br
-
-    span Last Name:
-    input(type="text", name="lastName", required=true)
-    br
-
-    span Email:
-    input(type="email", name="email", required=true)
-    br
-
-    span Password:
-    input(type="password", name="password", required=true)
-    br
-
-    input(type="submit")
+html
+  head
+    link(href='http://localhost:3000/static/css/style.css', rel='stylesheet')
+  body
+    div.main
+      form(method='post')
+        ul.services
+          h1.push Create an Account
+          span First Name:
+          input.new(type='text', name='firstName', placeholder='Your name..', required='required')
+          br
+          span Last Name:
+          input.new(type='text', name='lastName', placeholder='Your lastname..', required='required')
+          br
+          span Email:
+          input.new(type='email', name='email', placeholder='Your email..', required='required')
+          br
+          span Password:
+          input.new(type='password', name='password', placeholder='Your password..', required='required')
+          br
+          span Address:
+          input.new(type='text', name='address', placeholder='Your address..', required='required')
+          br
+          input.new(type='submit')
